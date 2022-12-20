@@ -15,6 +15,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+      - uses: azure/webapps-deploy@v2
+        with:
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1BF1FD3332CE40AF93D91872423177AE }}
 
       - name: Set up Java version
         uses: actions/setup-java@v1
